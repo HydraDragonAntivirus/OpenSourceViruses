@@ -65,17 +65,19 @@ while [ $attempts -lt $max_attempts ]; do
         local encrypted_file="$1"
         local original_file="${encrypted_file%.enc}"  # Remove the .enc extension
 
-        # Decrypt the file using AES-256-CBC
+        # Attempt to decrypt the file using AES-256-CBC
         openssl enc -aes-256-cbc -d -in "$encrypted_file" -out "$original_file" -pass "pass:$decryption_password" > /dev/null 2>&1
 
         # Check if decryption was successful
-        if [ $? -eq 0 ]; then
-            # Remove the encrypted file
+        if [ -f "$original_file" ]; then
+            # File successfully decrypted
             rm "$encrypted_file" > /dev/null 2>&1
             echo "Decryption successful."
-            break  # Exit the loop
+            return 0
         else
+            # File not successfully decrypted
             echo "Incorrect password. Please try again."
+            return 1
         fi
     }
 
