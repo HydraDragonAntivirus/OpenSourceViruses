@@ -77,7 +77,7 @@ while [ $attempts -lt $max_attempts ]; do
         else
             # File not successfully decrypted
             echo "Incorrect password. Please try again."
-            return 1
+            exit 1
         fi
     }
 
