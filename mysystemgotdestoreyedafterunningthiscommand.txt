@@ -1657,7 +1657,6 @@ def scan_single_file(file_path):
     except Exception as e:
         print(f"Error scanning file {file_path}: {e}")
         return []
-strace: attach: ptrace(PTRACE_SEIZE, 462): 
 def main():
     while True:
         print("You need install firejail and strace chkrootkit clamav rkhunter")
