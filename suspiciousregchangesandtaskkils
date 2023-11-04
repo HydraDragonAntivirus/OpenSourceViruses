@@ -92,7 +92,6 @@ reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Notepad" /v iPointSize /f
 reg delete "HKEY_CLASSES_ROOT\Unknown\DefaultIcon" /ve /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop" /v Nochangingwallpaper /t REG_DWORD /d 0 /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer/v NoClose /t REG_DWORD /d
-1/f > nul
 eg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration"  /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System"  /v "ConsentPromptBehaviorAdmin" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Notepad" /v iPointSize /t REG_DWORD /d 36 /f
