@@ -25,11 +25,6 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policie
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layout" /ve /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v disablelogonbar /f
 reg delete "HKEY_CURRENT_USER\Control Panel\Mouse" /v swapmousebutton /f
-reg add "HKEY_CLASSES_ROOT\exefile\DefaultIcon" /ve /d "%1" /f
-reg add "HKEY_CLASSES_ROOT\mp3file\DefaultIcon" /ve /d "%1" /f
-reg add "HKEY_CLASSES_ROOT\mp4file\DefaultIcon" /ve /d "%1" /f
-reg add "HKEY_CLASSES_ROOT\txtfile\DefaultIcon" /ve /d "%1" /f
-reg add "HKEY_CLASSES_ROOT\inifile\DefaultIcon" /ve /d "%1" /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient" /v AllowTelemetry /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient" /v MaxTelemetryAllowed /t REG_DWORD /d 0 /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuPin /f
