@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: F:\Install_PanOS_10_Sun_Valley.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AD3449B-616C-4E22-AFDF-B41E3C525EE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>auth</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003CModule_003E.cs" />
+    <Compile Include="s+aw8XWo_003E,Nlxeq9}k_005CKoJPS.cs" />
+    <Compile Include="‌⁯‍‫‪​​⁪⁮⁭⁯​⁫‎‏⁮⁪‬⁫‎​⁬⁯‮‍‮⁯‬‪‍‎‮⁭⁯‏⁭⁬‪⁬⁪‮.cs" />
+    <Compile Include="​‌⁪‌‬‭⁯⁮⁬⁯⁬‬⁭‎‍⁪‌‍⁬⁪‌‌​⁯⁯⁬‬⁬‬‫‎​⁮‬‮‫‍⁭‫‪‮.cs" />
+    <Compile Include="‌⁪​‪‫‭​‎⁫⁬⁪⁮‮‎‌‪‪⁬⁯⁫‭‫⁮‍‌‌‮​‬‌⁮‫⁬‮​⁯‎‮‫⁯‮.cs" />
+    <Compile Include="‪‌‏‌‮‪⁫‬‭⁫‫‎⁮⁬⁮⁬⁪‪​‫‍​⁭‏‍‍‏‫‬‬‬‬‌⁭⁬‭⁭‪‍⁯‮.cs" />
+    <Compile Include="‫​‪‎‌‪‭‎⁮​⁯‎⁭‍‏‎‎‭⁭⁯‍⁮⁫‭‮‪‪⁬‏‏‭‮‎⁬⁭‮​⁪‫⁬‮.cs" />
+    <Compile Include="⁬‭‫​⁪‭⁭⁫‪‪‮‎‬‬‏‏​‍‏‎⁮‬‬‍⁪⁮⁬⁪‏⁮‌⁬⁬‬⁬‭‪⁬‍⁭‮.cs" />
+    <Compile Include="⁪‌⁪⁫‬⁭⁫⁭‫‪‭‌⁫‎‫‫‫⁭‮‪⁯‏‍⁭‫‭‮‏⁮​‮‭‌‬⁬⁮‎‎‬‎‮.cs" />
+    <Compile Include="​‫⁯⁭‮‏⁬‏‍⁬⁯‎‭⁯‎‎⁯⁪‮‭⁪⁯‬‌‭‭​‮⁪⁬‭‫‬‮​⁯‫‪⁮‮.cs" />
+    <Compile Include="‫‌​⁬⁯‪‪‫‏‭‪‪‍‬​​‬‭‭‍⁮‎‭‭⁮‌‪‌‪‫‌⁬‏⁪‮‍​‌​‮‮.cs" />
+    <Compile Include="⁮‭​‫‭‬⁪‌‬⁫‎⁬‎‎‬‭‭‪‫⁭‏‮‌‫⁮‍‎⁫⁫⁭‎​‫⁪‭​‏⁬⁫‌‮.cs" />
+    <Compile Include="ConfusedByAttribute.cs" />
+    <Compile Include="auth\Properties\Settings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
